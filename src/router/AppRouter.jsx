@@ -4,6 +4,9 @@ import { GlobalStyles } from "../components/GlobalStyles/GlobalStyles"
 import Home from "../pages/Home/Home"
 import Login from "../pages/Login/Login"
 import About from "../pages/About/About"
+import PrivateRouter from "./PrivateRouter"
+import Details from "../pages/Details/Details"
+
 
 const AppRouter = () => {
   return (
@@ -13,7 +16,15 @@ const AppRouter = () => {
              <Routes>
                      <Route path="/" element={<Home/>}  />
                      <Route path="login" element={<Login/>}  />
-                     <Route path="about" element={<About/>}  />
+<Route path="about" element={<PrivateRouter/>}>
+     <Route path="" element={<About/>}  />
+</Route>
+<Route path="details" element={<PrivateRouter/>}>
+     <Route path="" element={<Details/>}  />
+</Route>
+
+                  
+
             </Routes>
     </BrowserRouter>
   )
