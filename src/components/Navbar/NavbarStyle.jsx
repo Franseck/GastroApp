@@ -16,10 +16,8 @@ export const Menu = styled(Flex)`
     flex-direction: column;
     max-height: ${({ isOpen }) => (isOpen ? "400" : "0")};
     overflow: hidden;
-  }
-  h1 {
-    font-size: 1.3rem;
-  }
+   
+      }
 `;
 
 export const NavRes = styled(Flex)`
@@ -31,20 +29,23 @@ export const NavRes = styled(Flex)`
 
 export const NavLi = styled(Link)`
   color: #8d764a;
-  text-align: center;
+    text-align: center;
   text-decoration: none;
   margin: 1rem;
   font-size: 1.1rem;
   display: flex;
+  &:hover{
+    color: teal;
+  }
   h1 {
     font-size: 2rem;
   }
 
-  @media (max-width: ${breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.tablet}) {
     font-size: 1rem;
     display: flex;
     flex-direction: column;
-
+    
     h1 {
       font-size: 1.3rem;
     }

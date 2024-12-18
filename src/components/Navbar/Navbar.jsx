@@ -22,7 +22,7 @@ const Navbar = () => {
 
       <Menu isOpen={isOpen} onClick={()=>setIsOpen(false)}>
         <NavLi to="/about">About</NavLi>
-        <NavLi to="/contact">Contact</NavLi>
+          <NavLi to="/contact">Contact</NavLi>
         <NavLi to="/login" onClick={()=>sessionStorage.clear()}>Logout</NavLi>
       </Menu>
     </Nav>
