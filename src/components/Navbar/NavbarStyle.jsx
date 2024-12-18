@@ -9,22 +9,25 @@ const breakpoints = {
   desktop: "1024px",
 };
 
-export const Menu = styled(Flex) `
-      @media (max-width: ${breakpoints.tablet}) {
+export const Menu = styled(Flex)`
+  @media (max-width: ${breakpoints.tablet}) {
     font-size: 1rem;
     display: flex;
-      flex-direction: column;
-      width: 100%;
-max-height: ${({isOpen})=> (isOpen ? "400" : "0")};
-overflow: hidden;
-      }
-    h1 {
-      font-size: 1.3rem;
-    }
+    flex-direction: column;
+    max-height: ${({ isOpen }) => (isOpen ? "400" : "0")};
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+`;
 
-
-
-`
+export const NavRes = styled(Flex)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+`;
 
 export const NavLi = styled(Link)`
   color: #8d764a;
@@ -32,22 +35,20 @@ export const NavLi = styled(Link)`
   text-decoration: none;
   margin: 1rem;
   font-size: 1.1rem;
-display: flex;
+  display: flex;
   h1 {
-    margin: 0;
-    padding: 0;
     font-size: 2rem;
   }
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media (max-width: ${breakpoints.mobile}) {
     font-size: 1rem;
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
 
     h1 {
       font-size: 1.3rem;
     }
-    }
+  }
 
   @media (max-width: ${breakpoints.mobile}) {
     margin: 0.5rem;
@@ -63,27 +64,25 @@ export const Nav = styled(Flex)`
   justify-content: space-between;
   background-color: bisque;
   font-family: "Fredericka the Great", serif;
-  div {
-    display: flex;
-    justify-content: space-evenly;
-  }
 
   h1 {
     color: darkgreen;
   }
 
   @media (max-width: ${breakpoints.tablet}) {
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
   }
 `;
 
-export const Hamburger = styled.div `
-    display: none;
-    font-size: 1.5rem;
-    color: darkgreen;
-cursor: pointer;
-@media (max-width: ${breakpoints.tablet}) {
+export const Hamburger = styled.div`
+  display: none;
+  font-size: 1.5rem;
+  color: darkgreen;
+  cursor: pointer;
+  @media (max-width: ${breakpoints.tablet}) {
     display: block;
   }
 `;
