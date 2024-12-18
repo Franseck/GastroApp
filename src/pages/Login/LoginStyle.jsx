@@ -7,7 +7,7 @@ background-image: url("https://cdn.pixabay.com/photo/2022/10/23/22/40/vegetables
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
-
+font-family: "Fredericka the Great", serif;
 ` ;
 
 export const FormContainer = styled(Flex)`
@@ -20,11 +20,13 @@ export const FormContainer = styled(Flex)`
     padding: 0.5rem;
     flex-direction: column;
     position: relative;
+
 `;
 export const Header = styled.h1 `
     color: white;
     font-size: 2rem;
 margin: 2rem;
+text-align: center;
 `
 
 export const StyledInput = styled.input`
@@ -34,7 +36,7 @@ export const StyledInput = styled.input`
     border-radius: 5px;
     text-indent: 2.2rem;
     margin: 0.5rem;
-
+    font-family: "Fredericka the Great", serif;
 `
 
 export const StyledForm = styled.form `
@@ -48,13 +50,15 @@ color: white;
 border: none;
 margin: 1rem;
 border-radius: 5px;
+font-family: "Fredericka the Great", serif;
 cursor : pointer;
 &:hover {
-    opacity: 0.8;
+    opacity: 0.8; 
+
 }
 `;
 export const StyledImg = styled.img `
-    width: 8rem;
+    width: 6rem;
  position: absolute;
  top: 0;
  border-radius: 10px;
