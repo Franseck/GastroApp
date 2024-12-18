@@ -10,8 +10,14 @@ import { useNavigate } from "react-router-dom"
 const Login = () => {
 
   const navigate = useNavigate();
+
+  const userInfo = {
+    username : "Seckin",
+  };
+
 const handleSubmit =(e)=>{
-  e.prevent.default();
+  e.preventDefault();
+  sessionStorage.setItem("user", JSON.stringify(userInfo));
   navigate(-1);
 }
 
@@ -24,8 +30,8 @@ const handleSubmit =(e)=>{
 Seckin Gastro App
 </Header>
 <StyledForm onSubmit={handleSubmit}>
-<StyledInput type="text" placeholder="username" required/>
-<StyledInput type="password" placeholder="password" required/>
+<StyledInput type="text" placeholder="username" autoComplete="user" required/>
+<StyledInput type="password" placeholder="password"  autoComplete="pass" required/>
 <StyledButton type="submit">Login</StyledButton>
 </StyledForm>
 
