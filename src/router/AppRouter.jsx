@@ -6,6 +6,7 @@ import Login from "../pages/Login/Login"
 import About from "../pages/About/About"
 import PrivateRouter from "./PrivateRouter"
 import Details from "../pages/Details/Details"
+import Contact from "../pages/Contact/Contact"
 
 
 
@@ -22,8 +23,12 @@ const AppRouter = () => {
 <Route path="about" element={<PrivateRouter/>}>
      <Route path="" element={<About/>}  />
 </Route>
+
 <Route path="details" element={<PrivateRouter/>}>
      <Route path="" element={<Details/>}  />
+</Route>
+<Route path="contact" element={<PrivateRouter/>}>
+     <Route path="" element={<Contact/>}  />
 </Route>
 
                   

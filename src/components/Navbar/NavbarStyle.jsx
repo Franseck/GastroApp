@@ -40,6 +40,12 @@ export const NavLi = styled(Link)`
   h1 {
     font-size: 2rem;
   }
+  img{
+    width: 2.5rem;
+    border: 1px solid brown;
+    border-radius: 10px;
+    margin-left: 6px;
+  }
 
   @media (max-width: ${breakpoints.tablet}) {
     font-size: 1rem;

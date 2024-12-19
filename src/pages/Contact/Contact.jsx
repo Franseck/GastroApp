@@ -1,6 +1,5 @@
-
 import { useNavigate } from "react-router-dom";
-import ContactContainer from "../components/styled/ContactContainer.styled";
+import ContactContainer from "./ContactStyle";
 
 
 const Contact = () => {
@@ -15,8 +14,8 @@ const Contact = () => {
       <ContactContainer>
       <form onSubmit={handleSubmit}>
         <div className="background">
-          <span>CONTACT wıth chef</span>
-          <div className="app-contact">CONTACT INFO : +62 81 314 928 595</div>
+          CONTACT wıth<span> chef Seckin</span>
+          <div className="app-contact">CONTACT INFO : +123456789</div>
           <div>
             <input placeholder="NAME" required />
             <input placeholder="EMAIL" required/>
