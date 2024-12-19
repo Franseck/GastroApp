@@ -9,7 +9,7 @@ export const HeaderContainer = styled(Flex)`
 export const MainHeader = styled.h2 `
     margin-top: 1rem ; 
     font-size: 2.3rem;
-    font-family: "Special Elite"
+    font-family: "Special Elite";
 `
 export const FormContainer = styled.form`
     display: flex;
@@ -52,7 +52,7 @@ margin-top: 0.5rem;
         transition: all 0.3s ease-in;
     }
 `
-    export const select = styled.select `
+    export const Select = styled.select `
     border-radius: 6px;
     padding: 5px;
     margin: 5px;

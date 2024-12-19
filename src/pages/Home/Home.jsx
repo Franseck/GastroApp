@@ -5,8 +5,9 @@ import Header from "../../components/Header/Header"
 
 const Home = () => {
 
+  const mealType = ["Breakfast", "Dinner", "Lunch", "Snack", "TeaTime" ];
   const [query, setQuery] = useState("");
-  const [type, setType] = useState("")
+  const [selectedMeal, setSelectedMeal] = useState(mealType[0])
   const [recipes, setRecipes] = useState("")
 
 
@@ -31,7 +32,7 @@ useEffect(()=>{
 
   return (
     <div>
-      <Header setQuery={setQuery} />
+      <Header setQuery={setQuery} setMealType={setSelectedMeal} mealType={mealType}  />
 
     </div>
   )
