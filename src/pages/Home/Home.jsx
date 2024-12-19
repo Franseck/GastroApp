@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import HomeStyle, { HeaderText, HomeImg, ImgDiv } from "./HomeStyle"
+import { useState } from "react";
+import  { HeaderText, HomeImg, ImgDiv } from "./HomeStyle"
 import axios from "axios";
 import Header from "../../components/Header/Header"
 import Cards from "../../components/Cards/Cards"

@@ -11,7 +11,7 @@ const navigate = useNavigate();
         <Card>
           <Header>{recipe.name}</Header>
           <Image src={recipe.image} />
-          <Button onClick={()=> navigate("details")}>View More</Button>
+          <Button onClick={()=> navigate("details", {state: recipe, replace:false})}>View More</Button>
 </Card>
       ))}
 
