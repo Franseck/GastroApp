@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import HomeStyle from "./HomeStyle"
+import HomeStyle, { HomeImg, ImgDiv } from "./HomeStyle"
 import axios from "axios";
 import Header from "../../components/Header/Header"
+import Cards from "../../components/Cards/Cards"
+import chef from "../../assets/home.png"
 
 const Home = () => {
 
@@ -11,29 +13,37 @@ const Home = () => {
   const [recipes, setRecipes] = useState("")
 
 
-const BASE_URL ='https://dummyjson.com/recipes'
+const URL ='https://dummyjson.com/recipes'
 
 
 const getData = async () => {
-try {
+  if(query) {
+    try {
     const {data} = await axios(URL);
-  console.log(data.recipes)
+  setRecipes(data.recipes)
 } catch (error) {
   console.log(error);
 }
-
-
-};
-
-useEffect(()=>{
-  getData();
-},[]);
+} else{
+  alert("Please write your meal")
+}
+}
+console.log(recipes);
 
 
   return (
     <div>
-      <Header setQuery={setQuery} setMealType={setSelectedMeal} mealType={mealType}  />
-
+      <Header 
+      setQuery={setQuery} 
+      setMealType={setSelectedMeal} 
+      mealType={mealType}  
+      getData={getData}/>
+      {!recipes && (
+        <ImgDiv>
+        <HomeImg src={chef}/>
+        </ImgDiv>
+      )}
+<Cards recipes={recipes}/>
     </div>
   )
 }

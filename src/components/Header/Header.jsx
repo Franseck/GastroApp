@@ -13,7 +13,7 @@ const Header = ({setQuery, setSelectedMeal, getData, mealType}) => {
   Welcome to GastroApp
 </MainHeader>
 <FormContainer onSubmit={handleSubmit}>
-  <FoodInput type="text" placeholder="search" onChange={(e)=>setQuery(e.target.value)}/>
+  <FoodInput type="text" placeholder="Search" onChange={(e)=>setQuery(e.target.value)}/>
 <Button type="submit">Search</Button>
 <Select  name="mealType" id="mealType" onChange={(e)=>setSelectedMeal(e.target.value)} >
 {mealType.map((meal, index)=>(

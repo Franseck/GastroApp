@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Flex from "../GlobalStyles/Flex";
+import { breakpoints } from "../Navbar/NavbarStyle";
 
 export const HeaderContainer = styled(Flex)`
     background: #988772;
@@ -10,6 +11,10 @@ export const MainHeader = styled.h2 `
     margin-top: 1rem ; 
     font-size: 2.3rem;
     font-family: "Special Elite";
+    text-align: center;
+    @media (max-width: ${breakpoints.tablet}) {
+        font-size: 1rem;
+    }
 `
 export const FormContainer = styled.form`
     display: flex;
@@ -33,6 +38,7 @@ export const FoodInput = styled.input `
     margin: 5px;
     font-size: 1rem;
     font-family: "Nothing You Could Do", serif;
+ 
 `
 
 export const Button = styled.button `
@@ -44,8 +50,11 @@ export const Button = styled.button `
 margin-top: 0.5rem;
     border-radius: 6px;
      font-family: "Fredericka the Great";
+     @media (max-width: ${breakpoints.tablet}) {
+        font-size: 0.8rem;
+    }
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     &:hover {
         background: bisque;
         color: darkgoldenrod;
@@ -54,9 +63,22 @@ margin-top: 0.5rem;
 `
     export const Select = styled.select `
     border-radius: 6px;
+    cursor: pointer;
     padding: 5px;
-    margin: 5px;
+    margin-top: 0.5rem;
+    margin-left: 5px;
     height: 2.5rem;
     border: none;
-    font-size:1.5rem;
+    font-size:1rem;
+    font-family: "Fredericka the Great";
+    background-color: bisque;
+    color: darkgoldenrod;
+    @media (max-width: ${breakpoints.tablet}) {
+        font-size: 0.8rem;
+    }
+    &:hover {
+        background-color: #105454;
+        color: black;
+        transition: all 0.3s ease-in;
+    }
     `

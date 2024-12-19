@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Flex from "../GlobalStyles/Flex";
 import theme from "../GlobalStyles/theme";
 
-const breakpoints = {
+export const breakpoints = {
   mobile: "320px",
   tablet: "768px",
   desktop: "1024px",
