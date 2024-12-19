@@ -1,8 +1,21 @@
-import CardsStyle from "./CardsStyle"
+import { useNavigate } from "react-router-dom"
+import CardsStyle, { Card, Header, MainContainer,Image, Button } from "./CardsStyle"
 
-const Cards = () => {
+const Cards = ({recipes}) => {
+
+const navigate = useNavigate();
+
   return (
-    <div>Cards</div>
+    <MainContainer wrap="wrap">
+      {recipes.map((recipe, index)=>(
+        <Card>
+          <Header>{recipe.name}</Header>
+          <Image src={recipe.image} />
+          <Button onClick={()=> navigate("details")}>View More</Button>
+</Card>
+      ))}
+
+    </MainContainer>
   )
 }
 

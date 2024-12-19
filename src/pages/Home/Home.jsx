@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HomeStyle, { HomeImg, ImgDiv } from "./HomeStyle"
+import HomeStyle, { HeaderText, HomeImg, ImgDiv } from "./HomeStyle"
 import axios from "axios";
 import Header from "../../components/Header/Header"
 import Cards from "../../components/Cards/Cards"
@@ -10,7 +10,7 @@ const Home = () => {
   const mealType = ["Breakfast", "Dinner", "Lunch", "Snack", "TeaTime" ];
   const [query, setQuery] = useState("");
   const [selectedMeal, setSelectedMeal] = useState(mealType[0])
-  const [recipes, setRecipes] = useState("")
+  const [recipes, setRecipes] = useState(null)
 
 
 const URL ='https://dummyjson.com/recipes'
@@ -43,7 +43,11 @@ console.log(recipes);
         <HomeImg src={chef}/>
         </ImgDiv>
       )}
-<Cards recipes={recipes}/>
+      {recipes?.length===0 && (
+        <HeaderText>The food cannot be found</HeaderText>
+      )}
+      {recipes?.length>0 && 
+<Cards recipes={recipes}/> }
     </div>
   )
 }
