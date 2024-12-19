@@ -6,7 +6,7 @@ import Login from "../pages/Login/Login"
 import About from "../pages/About/About"
 import PrivateRouter from "./PrivateRouter"
 import Details from "../pages/Details/Details"
-import Register from "../pages/Register/Register"
+
 
 
 const AppRouter = () => {
@@ -17,7 +17,7 @@ const AppRouter = () => {
              <Routes>
                      <Route path="/" element={<Home/>}  />
                      <Route path="login" element={<Login/>}  />
-                     <Route path="register" element={<Register/>}  />
+                   
 
 <Route path="about" element={<PrivateRouter/>}>
      <Route path="" element={<About/>}  />
