@@ -31,7 +31,7 @@ useEffect(()=>{
 
   return (
     <div>
-      <Header/>
+      <Header setQuery={setQuery} />
 
     </div>
   )

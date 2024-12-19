@@ -67,7 +67,7 @@ export const Nav = styled(Flex)`
   font-family: "Fredericka the Great", serif;
 
   h1 {
-    color: darkgreen;
+    color: #105454;
   }
 
   @media (max-width: ${breakpoints.tablet}) {

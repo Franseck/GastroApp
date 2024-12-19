@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const ImgDiv = styled.div`
 display: flex;
 justify-content: center;
@@ -12,6 +13,6 @@ export const HomeImg = styled.img`
 `
 export const HeaderText = styled.h1`
     font-size: 2.5rem;
-    color: burlywood;
+    color: #9b805d;
     text-align: center;
 `
